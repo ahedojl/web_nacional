@@ -2,15 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Web_Nacionalidad",
+    "title": "Origen y criminalidad",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "INTRODUCCIÓN.\nLa Ertzaintza publica, desde el año 2025 el origen",
+    "crumbs": [
+      "Introducción"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this site",
+    "crumbs": [
+      "Basics"
+    ]
   }
 ]

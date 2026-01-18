@@ -2,20 +2,21 @@ project:
   type: website
 
 website:
-  title: "Web_Nacionalidad"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  page-navigation: true
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Introducción"
+        href: index.qmd
+      - section: "Basics"
+        href: about.qmd
+        contents:
+          - index.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
+    theme: cosmo
 
 editor: visual
 

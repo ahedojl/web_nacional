@@ -1,7 +1,37 @@
 ---
-title: "Web_Nacionalidad"
+title: "Origen y criminalidad"
 ---
 
-This is a Quarto website.
+```{r, include=FALSE}
+library(ggplot2)
+library(readODS)
+library(tidyverse)
+library(kableExtra)
+library(knitr)
+library(DT)
+```
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{r include=FALSE}
+nacionalidad <- read_ods("~/Documentos/RStudio/Ertzaina/Datos/20253Ttras.ods")
+```
+
+# INTRODUCCIÓN.
+
+La Ertzaintza publica, desde el año 2025 el origen
+
+```{r}
+#| echo: false
+#| title: Tabla total
+datatable(
+  nacionalidad,
+  extensions = c('FixedHeader', 'FixedColumns'), 
+  options = list(
+    scrollX = TRUE,         # Requerido para FixedColumns
+    scrollY = "400px",      # Altura fija para que el scroll sea interno
+    fixedHeader = TRUE,     # Activa la cabecera fija
+    fixedColumns = list(leftColumns = 2), # Fija las 2 columnas
+    pageLength = 50,        # Número de filas por página
+    dom = 'tip'             # Controla qué elementos (filtro, info, etc.) se ven
+  )
+)
+```
