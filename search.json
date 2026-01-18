@@ -4,19 +4,20 @@
     "href": "index.html",
     "title": "Origen y criminalidad",
     "section": "",
-    "text": "INTRODUCCIÓN.\nLa Ertzaintza publica, desde el año 2025 el origen de las personas detenidas e investigadas. Viendo estos gráficos, nos preguntamos si realmente estamos ante intervenciones racializadas o no. En esta web pretendemos darte todos los datos que tenemos para que llegues a tu conclusión.",
+    "text": "INTRODUCCIÓN.\nLa Ertzaintza publica, desde el año 2025 el origen de las personas detenidas e investigadas. Viendo estos gráficos, nos preguntamos si realmente estamos ante intervenciones racializadas o no. En esta web pretendemos darte todos los datos que tenemos para que llegues a tu conclusión.\nLa primera observación que podemos hacer es, cruzando los datos con el número de delitos, saber que porcentaje de detenciones se realizan.\nLo siguiente será comprobar que es lo que dice la Ley de Enjuciamiento Criminal sobre las detenciones y las investigaciones.\nY, por último viendo las diferencias que hay en las nacionalidades entre detenidos e investigados.\nEn este sentido, veamos un gráfico de sectores.\nEn el Figura 1 se observa la diferencia porcentual entre detenidos e investigados, en cuanto a si son nacionales o extranjeros.\n\n\n\n\n\n\n\n\nFigura 1: Criminalidad total. Detenidos e investigados",
     "crumbs": [
       "Introducción"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "tablas.html",
+    "href": "tablas.html",
+    "title": "Tablas",
     "section": "",
-    "text": "About this site",
+    "text": "En la siguiente tabla, se presentan todos los datos que proporciona la Ertzaintza. En los datos originales se presentan separados los hombre de las mujeres, pero en la tabla, está la suma de ambos y será sobre esta cifra sobre la que se elaborarán los gráficos.\n\n\n\n\n\n\nTabla 1",
     "crumbs": [
-      "Basics"
+      "Anexos",
+      "Tablas"
     ]
   }
 ]
