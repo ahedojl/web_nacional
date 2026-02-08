@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Intervenciones racializadas?</title>
+<title>Criminalidad Total</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./criminal.html" rel="next">
+<link href="./homicidio21.html" rel="next">
+<link href="./requisitorias.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -69,6 +70,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.11.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 <link rel="stylesheet" href="estilos2.css">
@@ -83,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introducción</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./total21.html">Condenas</a></li><li class="breadcrumb-item"><a href="./total21.html">Criminalidad Total</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -108,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introducción</span></a>
   </div>
 </li>
@@ -364,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./total21.html" class="sidebar-item-text sidebar-link">
+  <a href="./total21.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Criminalidad Total</span></a>
   </div>
 </li>
@@ -496,9 +506,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./total21.html">Condenas</a></li><li class="breadcrumb-item"><a href="./total21.html">Criminalidad Total</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Intervenciones racializadas?</h1>
+<h1 class="title">Criminalidad Total</h1>
+<p class="subtitle lead">Ertzaintza y Fiscalía</p>
 </div>
 
 
@@ -515,59 +526,254 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Esta pregunta, ¿la policía del País Vasco realiza intervenciones racializadas? me la hago cuando consulto los datos que publica la <a href="https://www.ertzaintza.euskadi.eus/lfr/web/ertzaintza/estadisticas-delictivas" target="_blank">Ertzaintza</a> sobre el origen de las personas detenidas e investigadas en Euskadi.</p>
-<p>Vamos a ver varias cuestiones que nos pueden acercar a la respuesta.</p>
-<p>Cuando leo lo que publica la Ertzaintza, me encuentro un dato que me llama la atención, la diferencia que hay entre detenidos e investigados dependiendo de si el lugar de nacimiento es uno u otro, sobre todo cuando se trata de Euskadi y Magreb.</p>
-<div id="tbl-euskadimagreb" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-euskadimagreb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;1: Detenidos e investigados de Euskadi y del Magreb
+<p>En esta página podremos comparar los detenidos e investigados por la Ertzaintza en cuanto a su lugar de origen y los condenados (según datos de 2024 de la Fiscalía Nacional) según su lugar de origen.</p>
+<div id="fig-detenidos-investigados-total" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-detenidos-investigados-total-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-detenidos-investigados-total" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-detenidos-investigados-total-1" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-detenidos-investigados-total-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-f09815cf4e240553d44b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-f09815cf4e240553d44b">{"x":{"visdat":{"f25a3b35b738":["function () ","plotlyVisDat"]},"cur_data":"f25a3b35b738","attrs":{"f25a3b35b738":{"labels":{},"values":{},"marker":{"colors":["darkgreen","lightgreen"]},"textposition":"inside","textinfo":"label+percent","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Det Inv Nacional","Det Inv Extranjero"],"values":[16145,14175],"marker":{"color":"rgba(31,119,180,1)","colors":["darkgreen","lightgreen"],"line":{"color":"rgba(255,255,255,1)"}},"textposition":["inside","inside"],"textinfo":"label+percent","showlegend":false,"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-detenidos-investigados-total-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Ertzaintza
 </figcaption>
-<div aria-describedby="tbl-euskadimagreb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-detenidos-investigados-total" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-detenidos-investigados-total-2" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-detenidos-investigados-total-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-75130395d6fe046d7cb6" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-75130395d6fe046d7cb6">{"x":{"visdat":{"f25a2527f26a":["function () ","plotlyVisDat"]},"cur_data":"f25a2527f26a","attrs":{"f25a2527f26a":{"labels":{},"values":{},"marker":{"colors":["darkgreen","lightgreen"]},"textposition":"inside","textinfo":"label+percent","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Condenado Nacional","Condenado Extranjero"],"values":[324232,131473],"marker":{"color":"rgba(31,119,180,1)","colors":["darkgreen","lightgreen"],"line":{"color":"rgba(255,255,255,1)"}},"textposition":["inside","inside"],"textinfo":"label+percent","showlegend":false,"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-detenidos-investigados-total-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Fiscalia Nacional
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-detenidos-investigados-total-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Detenidos + investigados vs.&nbsp;condenados.
+</figcaption>
+</figure>
+</div>
+<div id="tbl-detinvcond" class="tablas quarto-float quarto-figure quarto-figure-center anchored" style="color: white; border: 2px solid #e9ecef; background-color: darkblue; border-radius: 6px">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-detinvcond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Porcentaje de detenidos + investigados vs.&nbsp;condenados dependiendo de si son nacionales o extranjeros
+</figcaption>
+<div aria-describedby="tbl-detinvcond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="tablas caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Lugar</th>
-<th style="text-align: center;">Detenidos</th>
-<th style="text-align: center;">Investigados</th>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Det + Inv</th>
+<th style="text-align: center;">Condenados</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Euskadi</td>
-<td style="text-align: center;">31.32%</td>
-<td style="text-align: center;">40.26 %</td>
+<td style="text-align: left;">Nacionales</td>
+<td style="text-align: center;">53.25%</td>
+<td style="text-align: center;">71.15%</td>
 </tr>
 <tr class="even">
-<td>Magreb</td>
-<td style="text-align: center;">32 %</td>
-<td style="text-align: center;">19.08 %</td>
+<td style="text-align: left;">Extranjeros</td>
+<td style="text-align: center;">46.75%</td>
+<td style="text-align: center;">28.85%</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Como se puede observar en la tabla anterior, el porcentaje de detenciones es similar, pero cuando vemos el porcentaje de personas investigadas, hay una diferencia de casi más de 20 puntos.</p>
-<p>¿Por qué, ante el mismo delito, se detiene más a un extranjero que a un nacional, en cambio, si es investigado hay más proporción de nacionales que extranjeros?</p>
-<p>Ahí surge mi pregunta, a la hora de decidir si se detiene o se investiga a una persona ¿tiene que ver su origen?.</p>
-<p>Quizá no, quizá solo se trate de una aplicación de la Ley de Enjuiciamiento Criminal o de cualquier otro motivo.</p>
-<p>En cualquier caso, he pensado que merece la pena abundar más en los datos que tenemos para tratar de encontrar respuestas.</p>
-<p>Importante: Cuando vemos de los datos de malos tratos en el ámbito familiar, observamos que los porcentajes son similares. Si es familiar es porque tienen un domicilio conocido, por lo tanto, la diferencia, al menos en esta tipología no tiene como base el domicilio.</p>
-<p><a href="lesiones02.html">Malos tratos en el ámbito familiar.</a></p>
-<p>Lo mismo pasa con <a href="tortura02.html">malos tratos habituales en el ámbito familiar.</a></p>
-<p>Curioso lo que pasa con <a href="tortura03.html">“Otras infracciones de tortura y contra la integridad”</a>, que solo hay un detenido, luego esto también desmonta el hecho del domicilio fijo conocido</p>
-<p>Ver distribución de <a href="patrimonio13.html">sustracción de vehículos</a>, es impresionante.</p>
-<p>Para ello, en las páginas de esta web se va a mostrar el marco legislativo; los datos de los que nos suministra la Ertzaintza y los que nos proporciona la <a href="https://www.poderjudicial.es/cgpj/es/Temas/Estadistica-Judicial/Estadistica-por-temas/Datos-penales--civiles-y-laborales/Delitos-y-condenas/Condenados--explotacion-estadistica-del-Registro-Central-de-Penados-/" target="_blank">Fiscalía</a> con respecto a las personas condenadas.</p>
-<p>Notas: ver excel que he guardado en <a href="file:///home/vant/Documentos/Estad%C3%ADsticas/Fiscalia" class="uri">file:///home/vant/Documentos/Estad%C3%ADsticas/Fiscalia</a> Estadísitica condenados adultos 2024 por nacionalidad, los datos son que en el País Vasco ,en 2024 se han condenado a <img src="images/clipboard-2289549054.png" class="img-fluid"> los primeros es el total, el segundo es el nacional y ahora voy a poner el extranjero, 8868.</p>
-<p>Ahora voy a buscar datos de <a href="https://www.poderjudicial.es/stfls/ESTADISTICA/FICHEROS/7001%20Condenados/A%C3%B1os%20Anteriores/Estad%C3%ADstica%20de%20Condenados%20Adultos%20Personas%20condenadas%202024.xlsx?t=202601313742" target="_blank">reincidencias</a>.</p>
-<p>Noticias reincidencia euskadi <a href="https://www.ertzaintza.euskadi.eus/lfr/web/ertzaintza/ultimas-noticias/-/asset_publisher/HqAtdHx7jB7q/content/26_0054-964-personas-fueron-detenidas-en-euskadi-en-m%25C3%25A1s-de-una-ocasi%25C3%25B3n-por-el-mismo-motivo-durante-el-2025?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_assetEntryId=16916622&amp;_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_redirect=https%3A%2F%2Fwww.ertzaintza.euskadi.eus%2Flfr%2Fweb%2Fertzaintza%2Fultimas-noticias%3Fp_p_id%3Dcom_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_cur%3D3%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_delta%3D8%26p_r_p_resetCur%3Dfalse%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_assetEntryId%3D16916622" class="uri">https://www.ertzaintza.euskadi.eus/lfr/web/ertzaintza/ultimas-noticias/-/asset_publisher/HqAtdHx7jB7q/content/26_0054-964-personas-fueron-detenidas-en-euskadi-en-m%25C3%25A1s-de-una-ocasi%25C3%25B3n-por-el-mismo-motivo-durante-el-2025?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_assetEntryId=16916622&amp;_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_redirect=https%3A%2F%2Fwww.ertzaintza.euskadi.eus%2Flfr%2Fweb%2Fertzaintza%2Fultimas-noticias%3Fp_p_id%3Dcom_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_cur%3D3%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_delta%3D8%26p_r_p_resetCur%3Dfalse%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_HqAtdHx7jB7q_assetEntryId%3D16916622</a></p>
-<p>También voy a ver el porcentaje de condenas con respecto al porcentaje de detenciones e investigados.</p>
-<p>Sumo detenidos e investigados y me da el número de persona potencialmente juzgables y por lo tanto, condenables, y luego lo comparo con los los condenados.</p>
-<p>Otra cosa que se me está ocurriendo. Antecedentes policiales explicar lo que son los antecendentes policiales y reincidencia</p>
-<p>Más cosas Loftus y negros identificados por los testigos.</p>
+<section id="distribución-por-todos-los-lugares-de-nacimiento" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-por-todos-los-lugares-de-nacimiento">Distribución por todos los lugares de nacimiento</h2>
+<div id="fig-grafico_detinv_con" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafico_detinv_con-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-grafico_detinv_con" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-grafico_detinv_con-1" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-grafico_detinv_con-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-0802643838a3f33b1e2a" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-0802643838a3f33b1e2a">{"x":{"visdat":{"f25a274196ab":["function () ","plotlyVisDat"]},"cur_data":"f25a274196ab","attrs":{"f25a274196ab":{"labels":{},"values":{},"marker":{"colors":["#800080","#FF00FF","#000080","#0000FF","#008080","#00FFFF","#00FF00"]},"textposition":"inside","textinfo":"label+percent","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Det Inv Nacional","Det Inv UE sin España","Det Inv Europa sin UE","Det Inv África","Det Inv América","Det Inv Asia","Det Inv Oceanía"],"values":[16145,1409,420,7485,4563,296,2],"marker":{"color":"rgba(31,119,180,1)","colors":["#800080","#FF00FF","#000080","#0000FF","#008080","#00FFFF","#00FF00"],"line":{"color":"rgba(255,255,255,1)"}},"textposition":["inside","inside","inside","inside","inside","inside","inside"],"textinfo":"label+percent","showlegend":false,"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-grafico_detinv_con-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Detenidos + Investigados
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-grafico_detinv_con" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-grafico_detinv_con-2" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-grafico_detinv_con-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6fabb15785f50c648205" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6fabb15785f50c648205">{"x":{"visdat":{"f25a7e144e81":["function () ","plotlyVisDat"]},"cur_data":"f25a7e144e81","attrs":{"f25a7e144e81":{"labels":{},"values":{},"marker":{"colors":["#800080","#FF00FF","#000080","#0000FF","#008080","#00FFFF","#00FF00"]},"textposition":"inside","textinfo":"label+percent","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Condenado Nacional","Condenado UE sin España","Condenado Europa sin UE","Condenado África","Condenado América","Condenado Asia","Condenado Oceanía"],"values":[324232,26676,9227,45541,46255,3744,30],"marker":{"color":"rgba(31,119,180,1)","colors":["#800080","#FF00FF","#000080","#0000FF","#008080","#00FFFF","#00FF00"],"line":{"color":"rgba(255,255,255,1)"}},"textposition":["inside","inside","inside","inside","inside","inside","inside"],"textinfo":"label+percent","showlegend":false,"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-grafico_detinv_con-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Condenados
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafico_detinv_con-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Detenidos + Investigados vs Condenados por origen..
+</figcaption>
+</figure>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div id="tbl-distdet" class="tablas quarto-float quarto-figure quarto-figure-center anchored" style="color: white; border: 2px solid #e9ecef; background-color: darkgreen; border-radius: 6px">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Condenados
+</figcaption>
+<div aria-describedby="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="tablas caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nacional</td>
+<td style="text-align: right;">71.15%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UE sin España</td>
+<td style="text-align: right;">5.85%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Europa sin UE</td>
+<td style="text-align: right;">2.02%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">África</td>
+<td style="text-align: right;">9.99%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">América</td>
+<td style="text-align: right;">10.15%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asia</td>
+<td style="text-align: right;">0.82%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oceanía</td>
+<td style="text-align: right;">0.01%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div id="tbl-distdet" class="tablas quarto-float quarto-figure quarto-figure-center anchored" style="color: white; border: 2px solid #e9ecef; background-color: darkblue; border-radius: 6px">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Detenidos + Investigados
+</figcaption>
+<div aria-describedby="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="tablas caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nacional</td>
+<td style="text-align: right;">53.25%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UE sin España</td>
+<td style="text-align: right;">4.65%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Europa sin UE</td>
+<td style="text-align: right;">1.39%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">África</td>
+<td style="text-align: right;">24.69%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">América</td>
+<td style="text-align: right;">15.05%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asia</td>
+<td style="text-align: right;">0.98%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oceanía</td>
+<td style="text-align: right;">0.01%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div id="tbl-distdet" class="tablas quarto-float quarto-figure quarto-figure-center anchored" style="color: white; border: 2px solid #e9ecef; background-color: darkred; border-radius: 6px">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4: Diferencia
+</figcaption>
+<div aria-describedby="tbl-distdet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="tablas caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nacional</td>
+<td style="text-align: right;">17.9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UE sin España</td>
+<td style="text-align: right;">1.21%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Europa sin UE</td>
+<td style="text-align: right;">0.64%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">África</td>
+<td style="text-align: right;">-14.69%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">América</td>
+<td style="text-align: right;">-4.9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asia</td>
+<td style="text-align: right;">-0.15%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oceanía</td>
+<td style="text-align: right;">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -972,10 +1178,13 @@ Tabla&nbsp;1: Detenidos e investigados de Euskadi y del Magreb
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./requisitorias.html" class="pagination-link" aria-label="Requisitorias judiciales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Requisitorias judiciales</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./criminal.html" class="pagination-link" aria-label="Ley de Enjuicimiento Criminal">
-        <span class="nav-page-text">Ley de Enjuicimiento Criminal</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./homicidio21.html" class="pagination-link" aria-label="Homicidio y sus formas">
+        <span class="nav-page-text">Homicidio y sus formas</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
